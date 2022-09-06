@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+/* 타블렛 */
+@media screen and (max-width:989px) and (min-width:580px){
+
+  /* ask */
+.ask>ul>li{
+  padding:45px 45px;
+}
+.ask>ul>li>dl{
+  display: block;
+}
+.ask>ul>li>dl>dt{
+  padding-bottom: 15px;
+}
+.ask>ul>li>dl>dd{
+  width:auto;
+}
+.ask small{
+  top:150px; right:0;
+}
+.ask button{
+  width:200px;
+  line-height: 45px;
+  bottom:0; right:45px;
+}
+
+} /*  */
+
+/* 모바일 */
+@media screen and (max-width:579px) and (min-width:5px){
+article{
+  padding-top: 50px;
+}
+    /* ask */
+.ask>ul>li{
+  padding:30px 30px;
+}
+.ask>ul>li:first-child{
+  padding-bottom: 30px;
+}
+.ask>ul>li>dl{
+  display: block;
+}
+.ask>ul>li>dl>dt{
+  font-size:21px;
+  padding-bottom: 15px;
+}
+.ask>ul>li>dl>dd{
+  width:auto;
+}
+.ask>ul>li>dl>dd>textarea{
+  height:150px;
+  padding:10px;
+  box-sizing: border-box;
+}
+.ask small{
+  top:150px; right:0;
+}
+.ask button{
+  width:150px;
+  font-size:21px;
+  line-height: 40px;
+  bottom:0; right:30px;
+} 
+/* qna */
+.qna>h4{
+  font-size:25px;
+}
+.qna>dl>dt{
+  padding:10px;
+}
+.qna>dl>dt>div{
+  display: none;
+}
+.qna>dl>dd{
+  padding:20px;
+}
+
+} /*  */

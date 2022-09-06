@@ -1,0 +1,227 @@
+@charset "utf-8";
+
+@media screen and (min-width:990px){
+  #hiddenWeb{
+    display: none;
+  }
+}
+
+/* 타블렛 */
+@media screen and (max-width:989px) and (min-width:580px){
+  #hiddenWeb{
+    display: none;
+  }
+  #box01{
+    height: calc(100vh - 104px);
+  }
+
+  #box02>section.modal{
+    margin-left: -275px;
+    width:550px;
+    padding:50px;
+  }
+  div#show>ul>li{
+    padding:50px;
+  }
+  div#show>ul>li>dl>dd{
+    display: block;
+  }
+
+    /* list01 = 제품선택하기 1 / 4 */
+  li.list01 .bigPic{
+    width:60%;
+    margin:0 auto;
+    margin-bottom:30px;
+  }
+  li.list01 #inShow{
+    width:100%;
+    margin-left:0;
+  }
+  li.list01 .btn{
+    justify-content: center;
+  }
+
+    /* list02  = 포장선택하기 2 / 4 */
+    li.list02 .bigPic{
+      width:60%;
+      margin:0 auto;
+      margin-bottom:30px;
+    }
+    li.list02 #inShow{
+      width:100%;
+      margin-left:0;
+    }
+
+    /* list03 = 추가사항 선택하기 3 / 4 */
+    li.list03 .bigPic{
+      width:60%;
+      margin:0 auto;
+      margin-bottom:30px;
+    }
+    li.list03 #inShow{
+      width:100%;
+      margin-left:0;
+    }
+
+    /* list04 = 결과확인하기 4 / 4 */
+    li.list04 .bigPic{
+      width:60%;
+      margin:0 auto;
+      margin-bottom:30px;
+    }
+    li.list04 #inShow{
+      width:100%;
+      margin-left: 0;
+    }
+    div.allPrice{
+      width:auto;
+      right:50px;
+    }
+    .list04 small{
+      right:50px;
+      margin-bottom: 0;
+    }
+
+    /*  */
+}
+
+/* 모바일 */
+@media screen and (max-width:579px) and (min-width:5px){
+  #box01{
+    background-position: top center;
+    height: calc(100vh - 77.15px);
+  }
+
+  #box01>h2{
+    width:auto;
+    font-size:36px;
+    line-height: 50px;
+    border-style:none;
+    margin:-20px 0 0 -136px;
+  }
+  #box02>section.modal{
+    top:70px;
+    margin-left: -48vw;
+    width:96vw;
+    padding:60px 20px 30px;
+  }
+  #box02>section.modal>dl>dt{
+    font-size:24px;
+    margin-bottom:30px;
+  }
+  div#show>ul>li{
+    padding:30px 30px 60px;
+    position: relative;
+  }
+  div#show>ul>li>dl>dt{ 
+    font-size:24px;
+    margin-bottom: 30px;
+  }
+  div#show>ul>li>dl>dd{
+    display: block;
+  }
+
+    /* list01 = 제품선택하기 1 / 4 */
+  li.list01 .bigPic{
+    width:70%;
+    margin:0 auto;
+    margin-bottom:30px;
+  }
+  li.list01 #inShow{
+    width:100%;
+    margin-left:0%;
+  }
+  #inShow>ul.allProducts{
+    width:300%;
+  }
+  li.list01 #inShow figure{
+    width:13%;
+    margin: 0 1% 10px;
+  }
+
+  /* list02  = 포장선택하기 2 / 4 */
+  li.list02 .bigPic{
+    width:70%;
+    margin:0 auto;
+    margin-bottom:30px;
+  }
+  li.list02 #inShow{
+    width:100%;
+    margin-left:0%;
+  }
+  #inShow>ul.allWrapper{
+    width:200%;
+  }
+  li.list02 #inShow li{
+    width:75%;
+  }
+  li.list02 #inShow figure{
+    width:26%;
+    margin: 0 2% 20px;
+  }
+  li.list02 .btn{
+    justify-content: center;
+  }
+
+  /* list03 = 추가사항 선택하기 3 / 4 */
+  li.list03 .bigPic{
+    width:70%;
+    margin:0 auto;
+    margin-bottom:30px;
+  }
+  li.list03 #inShow{
+    width:100%;
+    margin-left:0%;
+  }
+  #inShow>ul.allCard{
+    width:200%;
+  }
+  li.list03 #inShow li{
+    width:75%;
+  }
+  li.list03 #inShow figure{
+    width:26%;
+    margin: 0 2% 20px;
+  }
+  li.list03 .btn{
+    justify-content: center;
+  }
+
+  /* list04 = 결과확인하기 4 / 4 */
+  li.list04 .bigPic{
+    width:70%;
+    margin:0 auto;
+    margin-bottom:30px;
+  }
+  li.list04 #inShow{
+    width:100%;
+    margin-left: 0;
+  }
+  ul.allChoice li{
+    font-size:15px;
+    margin-bottom:10px;
+    line-height:20px;
+  }
+  div.allPrice{
+    width:auto;
+    font-size: 24px;
+    line-height: 30px;
+    right:30px;
+  }
+  div.allPrice>p{
+    padding:0 5px;
+  }
+  .list04 small{
+    right:30px;
+    margin-bottom: 0;
+  }
+
+  /* 버튼 */
+  main .btn{
+    position: absolute;
+    bottom:30px; left:50%;
+    margin-left:-76.04px;
+  }
+
+  /*  */
+}

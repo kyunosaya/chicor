@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1:1문의</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/ask.css">
+  <link rel="stylesheet" href="./css/media/common_media.css">
+  <link rel="stylesheet" href="./css/media/ask_media.css">
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script defer src="./js/common.js"></script>
+  <script defer src="./js/ask.js"></script>
+</head>
+<body>
+  <div id="wrap">
+            <!-- header -->
+            <div id="headerWrap">
+              <header>
+                  <div>
+                      <h1>
+                          <a href="./index.html"><img src="./img/logo/chicorlogo_w.png" alt="chicorLogo"></a>
+                      </h1>
+                      <ul>
+                          <li><p>로그인</p></li>
+                          <li><p>회원가입</p></li>
+                          <li><p>관심상품</p></li> 
+                          <li><p>장바구니</p></li>
+                      </ul>
+                  </div>
+                      <p class="btn">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                      </p>
+              </header>
+  
+                 <!-- nav -->
+                  <nav>
+                      <div>
+                          <h2></h2>
+                          <ul>
+                              <li class="hiddenWeb"><a href="./index.html">홈</a></li>
+  
+                              <li id="memberMenu" class="hiddenWeb" name="on">
+                                  <a>회원정보</a>
+                                  <span></span>
+                                  <ul>
+                                    <li class="loginM"><a href="#">로그인</a></li>
+                                    <li class="joinM"><a href="#">회원가입</a></li>
+                                    <li class="interestM"><a href="#">관심상품</a></li>
+                                    <li class="basketM"><a href="#">장바구니</a></li>
+                                  </ul>
+                              </li>
+  
+                              <li><a href="./chicor.html">시코르 소개</a></li>
+  
+                              <li class="hiddenTablet" name="on">
+                                  <a href="#">브랜드 소개</a>
+                                  <!-- <span> v </span> -->
+                              <div>
+                                  <ul>
+                                      <li><a href="./loccitane.html">
+                                          <img src="./img/logo/loccitane_navlogo.png" alt="록시땅로고">
+                                          <p>록시땅</p>
+                                          </a>
+                                      </li>
+                                      <li><a href="./thebodyshop.html">
+                                          <img src="./img/logo/thebodyshop_navlogo.png" alt="더바디샵로고">
+                                          <p>더바디샵</p>
+                                          </a>
+                                      </li>
+                                      <li><a href="./kamill.html">
+                                          <img src="./img/logo/kamill_navlogo.png" alt="카밀로고">
+                                          <p>카밀</p>
+                                          </a>
+                                      </li>
+                                      <li><a href="./frudia.html">
+                                          <img src="./img/logo/frudia_navlogo.png" alt="후르디아로고">
+                                          <p>후르디아</p>
+                                          </a>
+                                      </li>
+                                      <li><a href="./onhope.html">
+                                          <img src="./img/logo/onhope_navlogo.png" alt="온호프로고">
+                                          <p>온호프</p>
+                                          </a>
+                                      </li>
+                                      <li><a href="./duftanddoft.html">
+                                          <img src="./img/logo/DAD_navlogo.png" alt="더프트앤도프트로고">
+                                          <p>더프트앤도프트</p>
+                                          </a>
+                                      </li>
+  
+                                  </ul>
+                              </div>
+                              </li>
+  
+                              <li id="brandMenu" class="hiddenWeb" name="on">
+                                  <a>브랜드소개</a>
+                                  <span></span>
+                                  <ul>
+                                      <li><a href="./loccitane.html">록시땅</a></li>
+                                      <li><a href="./thebodyshop.html">더바디샵</a></li>
+                                      <li><a href="./kamill.html">카밀</a></li>
+                                      <li><a href="./frudia.html">후르디아</a></li>
+                                      <li><a href="./onhope.html">온호프</a></li>
+                                      <li><a href="./duftanddoft.html">더프트앤도프트</a></li>
+                                  </ul>
+                              </li>
+  
+                              <li><a href="./products.html">제품</a></li>
+                              
+                              <li><a href="./promotion.html">이 달의 프로모션</a></li>
+                          </ul>
+  
+                          <p class="close">
+                              <span></span>
+                              <span></span>
+                          </p>
+                      </div>
+                  </nav>
+          </div>
+
+          <!-- main -->
+          <main>
+            <article>
+                <h3>1:1 문의 작성</h3>
+                <section>
+                    <div class="ask">
+                        <ul>
+                            <li>
+                                <dl>
+                                    <dt>문의 제목</dt>
+                                    <dd><input type="text"></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>문의 내용</dt>
+                                    <dd>
+                                        <textarea placeholder="20자 이상 작성해주세요."></textarea>
+                                        <small>문의와 무관한 내용은 통보없이 삭제 됩니다.</small>
+                                    </dd>
+                                </dl>
+                            </li>
+                        </ul>
+                        <button type="submit">작성하기</button>
+                    </div>
+
+                    <div class="qna">
+                        <h4>자주 묻는 질문</h4>
+                        <dl>
+                            <dt>주문한 내역은 어디서 확인 하나요?
+                                <div></div>
+                            </dt>
+                            <dd>
+                                <p>로그인 후, 온라인 상단에 있는 마이페이지를 클릭한후 구매내역의 주문배송조회에서 확인할 수 있습니다.</p>
+                                <p>문배송조회에서 주문한 내역이 확인이 안될 경우는 더바디샵으로 주문이 제대로 들어오지 못한 경우이니, 다시 재주문 해 주시면 됩니다.</p>
+                                <p>주 주문이 정상적으로 완료되면 주문배송조회에서 확인이 되며, 회원가입시 기입한 메일로 주문완료 메일 발송되오니 참고 부탁 드립니다.</p>
+                            </dd>
+                            <dt>주문한 내역의 변경은 가능한가요?
+                                <div></div>
+                            </dt>
+                            <dd>
+                                <p>무통장 입금으로 주문하신 고객님께서 주문내용을변경하고자 할 경우, 입금 전이시라면 해당주문을 취소하신 후 다시 주문을 하시면 됩니다. </p>
+                                <p class="space">그러나 입금 확인 후에는 주문을 취소하거나 변경하실 수 없습니다. (입금 후 주문취소나 변경을 원하신다면 고객센터 080-759-7700번으로 연락주십시오.)</p>
+                                <p>두 가지 결제 방법 모두 주문하신 제품이 이미 배송 준비 중인 상태에서는 변경이 불가능 합니다.</p>
+                            </dd>
+                            <dt>배송지를 잘못 적었어요.
+                                <div></div>
+                            </dt>
+                            <dd>
+                                <p>주소지를 잘못 적어주셨을 경우, 고객센터(080-759-7700)로 바로 문의주시거나, 또는 게시판에 글 남겨주시기 바랍니다.</p>
+                                <p>"결제완료" 상태까지는 주소지 변경되어 배송 출발 가능하오며 "배송준비중" 상태로 확인되실 경우는 이미 배송 출발이 된 상태이기에 배송지 변경이 어려움을 알려드립니다.</p>
+                            </dd>
+                            <dt>배송기간은 얼마나 걸리나요?
+                                <div></div>
+                            </dt>
+                            <dd>
+                                <p class="space">결제일로부터 대략 2~4일 소요 됩니다.</p>
+                                <p>단, 토요일.일요일.공휴일에는 택배사의 휴무로 인하여 배송이 없음을 알려드립니다.</p>
+                            </dd>
+                            <dt>회원 탈퇴시 유의사항
+                                <div></div>
+                            </dt>
+                            <dd>회원 탈퇴를 하시면, 개인정보 보호 정책에 따라 탈퇴한 회원님의 정보를 회사에서 가지고 있을 수 없기 때문에 그 동안에 누적하셨던 포인트 및 구매 내역은 모두 사라집니다. </dd>
+                        </dl>
+                    </div>
+                </section>
+            </article>
+          </main>
+
+
+
+
+                <!--view -->
+                <article id="view">
+                  <section>
+                      <h4>상품 목록</h4>
+                              <div>
+                              <figure>
+                                  <img src="./img/loccitane/LOC_blossom.png" alt="제품1">
+                                  <figcaption>
+                                      <dl>
+                                          <dt>록시땅</dt>
+                                          <dd>체리 블라썸 쎄르지에 에뚜알 쉬머링 핸드 크림</dd>
+                                          <dd>15,000원</dd>
+                                      </dl>
+                                  </figcaption>
+                              </figure>
+                              <figure>
+                                  <img src="./img/kamill/kamill_sensitive.png" alt="제품2">
+                                  <figcaption>
+                                      <dl>
+                                          <dt>카밀</dt>
+                                          <dd>카밀 핸드&amp;네일 크림 센시티브</dd>
+                                          <dd>7,200원</dd>
+                                      </dl>
+                                  </figcaption>
+                              </figure>
+                              <figure>
+                                  <img src="./img/loccitane/LOC_intensive.png" alt="제품3">
+                                  <figcaption>
+                                      <dl>
+                                          <dt>록시땅</dt>
+                                          <dd>시어 인텐시브 핸드 밤</dd>
+                                          <dd>27,000원</dd>
+                                      </dl>
+                                  </figcaption>
+                              </figure>
+                              <figure>
+                                  <img src="./img/frudia/frudia_greenury.png" alt="제품4">
+                                  <figcaption>
+                                      <dl>
+                                          <dt>후르디아</dt>
+                                          <dd>리프루스트 에센셜 블렌딩 핸드크림 그리너리</dd>
+                                          <dd>7,900원</dd>
+                                      </dl>
+                                  </figcaption>
+                              </figure>
+                              <figure>
+                                  <img src="./img/thebodyshop/thebodyshop_rose.png" alt="제품5">
+                                  <figcaption>
+                                      <dl>
+                                          <dt>더바디샵</dt>
+                                          <dd>브리티쉬 로즈 페탈-소포트핸드크림</dd>
+                                          <dd>18,000원</dd>
+                                      </dl>
+                                  </figcaption>
+                              </figure>
+                              <figure>
+                                  <img src="./img/onhope/onhope_carm.png" alt="제품6">
+                                  <figcaption>
+                                      <dl>
+                                          <dt>온호프</dt>
+                                          <dd>온호프 핸드크림 쏘 캄</dd>
+                                          <dd>15,000원</dd>
+                                      </dl>
+                                  </figcaption>
+                              </figure>
+                              <figure>
+                                  <img src="./img/kamill/kamill_intensive.png" alt="제품7">
+                                  <figcaption>
+                                      <dl>
+                                          <dt>카밀</dt>
+                                          <dd>카밀 핸드&amp;네일 크림 인텐시브</dd>
+                                          <dd>7,200원</dd>
+                                      </dl>
+                                  </figcaption>
+                              </figure>
+                              <figure>
+                                  <img src="./img/duftanddoft/DAD_pinkbreeze.png" alt="제품8">
+                                  <figcaption>
+                                      <dl>
+                                          <dt>더프트앤도프트</dt>
+                                          <dd>핑크브리즈 너리싱 핸드크림</dd>
+                                          <dd>15,000원</dd>
+                                      </dl>
+                                  </figcaption>
+                              </figure>
+                              <figure>
+                                  <img src="./img/kamill/kamill_lemon.png" alt="제품9">
+                                  <figcaption>
+                                      <dl>
+                                          <dt>카밀</dt>
+                                          <dd>카밀 핸드&네일 크림 플레쉬</dd>
+                                          <dd>7,200원</dd>
+                                      </dl>
+                                  </figcaption>
+                              </figure>
+                              <figure>
+                                  <img src="./img/thebodyshop/thebodyshop_green.png" alt="제품10">
+                                  <figcaption>
+                                      <dl>
+                                          <dt>더바디샵</dt>
+                                          <dd>후지 그린티 핸드크림</dd>
+                                          <dd>5,900원</dd>
+                                      </dl>
+                                  </figcaption>
+                              </figure>
+                              <figure>
+                                  <img src="./img/loccitane/LOC_intensive.png" alt="제품11">
+                                  <figcaption>
+                                      <dl>
+                                          <dt>록시땅</dt>
+                                          <dd>시어 인텐시브 핸드 밤</dd>
+                                          <dd>25,000원</dd>
+                                      </dl>
+                                  </figcaption>
+                              </figure>
+                              <figure>
+                                  <img src="./img/frudia/frudia_dazuling.png" alt="제품12">
+                                  <figcaption>
+                                      <dl>
+                                          <dt>후르디아</dt>
+                                          <dd>리프루스트 에센셜 블렌딩 핸드크림 다즐링</dd>
+                                          <dd>7,900원</dd>
+                                      </dl>
+                                  </figcaption>
+                              </figure>
+                          </div>
+
+                  </section>
+              </article>
+
+            <!-- modal -->
+            <article id="login">
+                <section>
+                    <h4>로그인</h4>
+                    <ul class="login01">
+                        <li class="loginId">
+                            <input type="text" placeholder="아이디를 입력하세요. *">
+                        </li>
+                        <li class="loginPw">
+                            <input type="password" placeholder="비밀번호를 입력하세요. *">
+                        </li>
+                    </ul>
+                    <p>
+                        <button>로그인</button>
+                    </p>
+                    <ul class="login02">
+                        <li><a href="">회원가입하기</a></li>
+                        <li><a href="">아이디/비밀번호 찾기</a></li>
+                    </ul>
+                </section>
+                <p class="close">
+                    <span></span>
+                    <span></span>
+                </p>
+            </article>
+
+            <article id="join">
+                <section>
+                    <h4>회원가입</h4>
+                    <ul>
+                        <li>
+                            <label for="userId">아이디</label>
+                            <input type="text" id="userId"><br>
+                            <span>(영문소문자/숫자, 4~16자)</span>
+                        </li>
+                        <li>
+                            <label for="userPW">비밀번호</label>
+                            <input type="password" id="userPW"><br>
+                            <span>(영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자)</span>
+                        </li>
+                        <li>
+                            <label for="userPW2">비밀번호 확인</label>
+                            <input type="password" id="userPW2">
+                        </li>
+                        <li>
+                            <label for="userEmail">이메일</label>
+                            <input type="text" id="userEmail">
+                            <span>@</span>
+                            <select name="Email" id="userEmail">
+                                <option>gmail.com</option>
+                                <option>naver.com</option>
+                                <option>nate.com</option>
+                                <option>daum.com</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="userPhone">휴대전화</label>
+                            <input type="tel" id="userPhone">
+                            <button>인증번호 전송</button>
+                        </li>
+                        <li>
+                            <label for="userBirth">생일</label>
+                            <input type="date" id="userBirth">
+                        </li>
+                        <li>
+                            <label for="userName">닉네임</label>
+                            <input type="text" id="userName">
+                        </li>
+                        <li>
+                            <input type="checkbox" id="userCheck02">
+                            <label for="userCheck02">이용약관 및 개인정보수집 및 이용, 쇼핑정보 수신(선택)에 모두 동의합니다.</label>
+                        </li>
+                    </ul>
+                    <p>
+                        <button>회원가입 하기</button>
+                    </p>
+                    </section>
+                <p class="close">
+                    <span></span>
+                    <span></span>
+                </p>
+            </article>
+
+            <article id="interest">
+                <section>
+                    <h4>관심 상품</h4>
+                    <div class="interestTop">
+                        <ul>
+                            <li>
+                                <input type="checkbox">
+                            </li>
+                            <li id="hiddenMobile">이미지</li>
+                            <li id="hiddenMobile">상품정보</li>
+                            <li id="hiddenMobile">가격</li>
+                            <li id="hiddenMobile">선택</li>
+                        </ul>
+                    </div>
+
+                    <div class="interestMain">
+                        <figure>
+                            <p>
+                                <input type="checkbox">
+                            </p>
+                            <img src="./img/frudia/frudia_greenury.png" alt="관심상품01">
+                            <figcaption>
+                                <dl>
+                                    <dt>리프루스트 에센셜 블렌딩 핸드크림 그리너리 </dt>
+                                    <dd>15,000원</dd>
+                                </dl>
+                            </figcaption>
+                            <div class="button">
+                                <p>
+                                    <button>장바구니</button>
+                                </p>
+                                <p>
+                                    <button>삭제하기</button>
+                                </p>
+                            </div>
+                        </figure> 
+                    </div>
+
+                    <div class="lastButton">   
+                        <p>
+                            <button>선택삭제</button>
+                        </p>
+                        <p>
+                            <button>선택 장바구니 담기</button>
+                        </p>
+                    </div>
+                </section>
+                <p class="close">
+                    <span></span>
+                    <span></span>
+                </p>
+            </article>
+
+            <article id="basket">
+                <section>
+                    <h4>장바구니</h4>
+                    <div class="basketTop">
+                        <ul>
+                            <li><input type="checkbox"></li>
+                            <li id="hiddenMobile">이미지</li>
+                            <li id="hiddenMobile">상품정보</li>
+                            <li id="hiddenMobile">수량</li>
+                            <li id="hiddenMobile">합계</li>
+                            <li id="hiddenMobile">선택</li>
+                        </ul>
+                    </div>
+
+                    <div class="basketMain">
+                        <figure>
+                            <p>
+                                <input type="checkbox">
+                            </p>
+                            <img src="./img/frudia/frudia_greenury.png" alt="관심상품01">
+                            <figcaption>
+                                <dl>
+                                    <dt>리프루스트 에센셜 블렌딩 핸드크림 그리너리</dt>
+                                    <dd><input type="range"></dd>
+                                    <dd>15,000원</dd>
+                                </dl>
+                            </figcaption>
+                            <div class="button">
+                                <p>
+                                    <button>관심상품</button>
+                                </p>
+                                <p>
+                                    <button>삭제하기</button>
+                                </p>
+                            </div>
+                        </figure> 
+                    </div>
+
+                    <div class="allPrice">
+                        <div>
+                            <p>주문금액</p>
+                            <p>155,000</p>
+                            <p>원</p>
+                        </div>
+                        <p>배송비 2,500원이 포함된 가격입니다.</p>
+                    </div>
+
+                    <div class="lastButton">   
+                        <p>
+                            <button>선택삭제</button>
+                        </p>
+                        <p>
+                            <button>구매하기</button>
+                        </p>
+                    </div>
+                </section>
+                <p class="close">
+                    <span></span>
+                    <span></span>
+                </p>
+            </article>
+
+
+
+
+
+
+
+
+      <!-- footer -->
+      <footer>
+        <div>
+          <section class="footer01">
+              <p>고객센터 이용안내</p>
+              <div>
+                  <dl>
+                      <dt>운영시간 : </dt>
+                      <dd>09:00 ~ 18:00</dd>
+                  </dl>
+                  <dl>
+                      <dt>점심시간 : </dt>
+                      <dd>12:00 ~ 13:00</dd>
+                  </dl>
+                  <dl>
+                      <dt>본사 전화번호 : </dt>
+                      <dd>00-000-0000</dd>
+                  </dl> 
+              </div>
+          </section>
+
+          <section class="footer02">
+              <ul>
+                  <li class="hiddenTablet"><a href="./chicor.html">시코르 소개</a></li>
+                  <li><a href="./ask.html">1:1 문의</a></li>
+                  <li><a href="./store.html">매장 안내</a></li>
+              </ul>
+          </section>
+
+          <section class="footer03">
+              <p>SNS</p>
+              <div>
+              <dl>
+                  <dt>
+                      <a href="https://www.youtube.com/channel/UCbcoJcFHnD7Qo9GHVB_yE4w" target="_blank"><img src="./img/snslogo/youtube_white02.png" alt="youtubelogo"></a>
+                  </dt>
+                  <dd><a href="https://www.youtube.com/channel/UCbcoJcFHnD7Qo9GHVB_yE4w">채널 시코르 CH.CHICOR</a></dd>
+              </dl>
+              <dl>
+                  <dt>
+                      <a href="https://www.instagram.com/chicor_shinsegae/" target="_blank"><img src="./img/snslogo/instagram_white02.png" alt="instalogo"></a>
+                  </dt>
+                  <dd><a href="https://www.instagram.com/chicor_shinsegae/">@chicor_shinsegae</a></dd>
+              </dl>
+              <dl>   
+                  <dt>
+                      <a href="https://www.facebook.com/chicor.shinsegae/" target="_blank"><img src="./img/snslogo/facebook_white02.png" alt="facebooklogo"></a>
+                  </dt>
+                  <dd><a href="https://www.facebook.com/chicor.shinsegae/">@chicor.shinsegae</a></dd>
+              </dl>
+          </div>
+          </section>
+      </div>
+
+      <div>
+          <section class="footer04">
+              <dl>
+                  <dt>(주)신세계 사업자등록번호 : </dt>
+                  <dd>201-81-32195</dd>
+              </dl>
+              <dl>
+                  <dt>대표 이메일주소 : </dt>
+                  <dd>chicor_com@shinsegae.com</dd>
+              </dl>
+              <dl>
+                  <dt>호스팅사업자 : </dt>
+                  <dd>(주)신세계아이앤씨 </dd>
+              </dl>
+              <small>&copy;2020 SHINSEGAE ALL RIGHTS RESERVED</small>
+
+              <dl>
+                  <dd><a href="https://www.youtube.com/channel/UCbcoJcFHnD7Qo9GHVB_yE4w" target="_blank"><img src="./img/snslogo/youtube_white02.png" alt="youtubelogo"></a></dd>
+                  <dd><a href="https://www.instagram.com/chicor_shinsegae/" target="_blank"><img src="./img/snslogo/instagram_white02.png" alt="instalogo"></a></dd>
+                  <dd><a href="https://www.facebook.com/chicor.shinsegae/" target="_blank"><img src="./img/snslogo/facebook_white02.png" alt="facebooklogo"></a></dd>
+              </dl>
+          </section>
+      </div>
+      </footer>
+
+              <!-- aside -->
+              <aside>
+                  <h4 class="hide">상단바</h4>
+                  <p class="top"><a href="#wrap">top</a></p>
+              </aside>
+
+  </div> <!-- wrap -->
+
+  <script>
+    $(function(){
+        const windowW = $(window).width()
+        if(windowW > 989){ /* web */
+            navWeb();
+            modalWeb();
+            accodianW();
+        }
+        else if(windowW <= 989 && windowW > 580){ /* tablet */
+            navTablet();
+            accodianTM();
+        }
+        else { /* mobile */
+            navMobile();
+            accodianTM();
+        }
+
+        // 공통
+        navTM();
+        view();
+        resize();
+        send();
+    });
+
+</script>
+</body>
+</html>

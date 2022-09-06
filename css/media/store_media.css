@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+/* 타블렛 */
+@media screen and (max-width:989px) and (min-width:580px){
+  #box01>section>div{
+    display: block;
+  }
+  .bigImg{
+    width:100%;
+    margin-bottom: 30px;
+  }
+  .explain{
+    width:100%; height:auto;
+    padding:30px;
+  }
+  #box01>section>ul>li>dl>dt{
+    font-size:21px;
+    padding:0 0 10px 0;
+  }
+
+} /*  */
+
+/* 모바일 */
+@media screen and (max-width:579px) and (min-width:5px){
+  #box01>section>div{
+    display: block;
+  }
+  .bigImg{
+    width:100%;
+    margin-bottom: 20px;
+  }
+  .explain{
+    width:100%; height:auto;
+    padding:20px 10px;
+  }
+  .explain>dt{
+    font-size:27px;
+    line-height: 30px;
+    position:relative;
+    padding-bottom: 30px;
+  }
+  .explain>dt>button{
+    position: absolute;
+    top:100%; left:100%;
+    margin:-30px 0 0 -100px;
+  }
+  .explain ul{
+    padding-top:10px;
+  }
+  /* 아래 */
+  #box01>section>ul>li{
+    padding: 30px 0 80px;
+    display: block;
+    position:relative;
+  }
+  #box01>section>ul>li>figure{
+    width:70%;
+    margin-right:20px;
+  }
+  #box01>section>ul>li>dl>dt{
+    font-size:21px;
+    padding:0 0 30px 0;
+    position:relative;
+  }
+  #box01>section>ul>li>dl>dd{
+    font-size:16px;
+  }
+  dt>button{ /* 즐겨찾기 */
+    padding:0 10px;
+    line-height: 20px;
+    box-sizing: border-box;
+    margin-left:10px;
+    position:absolute;
+    left:-10px; top:30px;
+  }
+  li>button{ /* 자세히보기 */
+    padding:0 30px;
+    bottom:20px; right:0;
+    font-size:18px;
+  }
+       
+} /*  */
