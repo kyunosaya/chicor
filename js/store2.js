@@ -1,7 +1,14 @@
 function startStore(){
 
   // 오브젝트
+    // btn
   const btn = document.querySelectorAll('.anotherStore>li>button')
+    // img
+  const btn2 = document.querySelectorAll('.explainImg li:not(:last-child)>img')
+    //iframe
+  const btn3 = document.querySelector('.explainImg li:last-child>img')
+
+    //   source
   const Title = document.querySelector('.explain>dt>dfn');
   const Address = document.querySelector('.explain>dd:nth-child(2)>span');
   const Time = document.querySelector('.explain>dd:nth-child(3)>span');
@@ -12,7 +19,7 @@ function startStore(){
   const Framei = document.querySelector('.bigImg>figcaption');
 
   // 객체생성
-  function Explanation(title,address,time,phone,img01,img02,img03/* ,framei */){
+  function Explanation(title,address,time,phone,img01,img02,img03,framei){
       this.title = title;
       this.address = address;
       this.time = time;
@@ -20,7 +27,7 @@ function startStore(){
       this.img01 = img01;
       this.img02 = img02;
       this.img03 = img03;
-      /* this.framei = framei; */
+      this.framei = framei;
   }
 
   // 매서드
@@ -32,9 +39,8 @@ function startStore(){
       Img01.innerHTML = `<img src="${this.img01}" alt="${this.title}">`
       Img02.innerHTML = `<img src="${this.img02}" alt="${this.title}">`
       Img03.innerHTML = `<img src="${this.img03}" alt="${this.title}">`
-      /* Framei.innerHTML = `<iframe src="${this.framei}" alt="${this.title}"></iframe>` */
+      Framei.innerHTML = `<iframe src="${this.framei}" width="100%" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade" name="iframe"></iframe>`
   }
-
   //인스턴스
   let source = [
       new Explanation('신세계 본점',
@@ -43,29 +49,29 @@ function startStore(){
                       '02-000-0000',
                       './img/store/original_store01.jpg',
                       './img/store/original_store02.jpg',
-                      './img/store/original_map.png'/* ,
-                      '"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.7772404824486!2d126.97864191564788!3d37.560311732241715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2f402e427b1%3A0x783616d428ac93ad!2z7ISc7Jq47Yq567OE7IucIOykkeq1rCDth7Tqs4TroZwgNzc!5e0!3m2!1sko!2skr!4v1658776289971!5m2!1sko!2skr" width="100%" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade" name="iframe"' */),
+                      './img/store/original_map.png',
+                      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.7772404824486!2d126.97864191564788!3d37.560311732241715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2f402e427b1%3A0x783616d428ac93ad!2z7ISc7Jq47Yq567OE7IucIOykkeq1rCDth7Tqs4TroZwgNzc!5e0!3m2!1sko!2skr!4v1658776289971!5m2!1sko!2skr'),
       new Explanation('강남역점',
                       '서울특별시 서초구 강남대로 441 서산빌딩 (B1F~2F)',
                       '12:00~22:00','02-000-0002',
                       './img/store/gangnam_store01.jpg',
                       './img/store/gangnam_store02.jpg',
-                      './img/store/gangnam_map.png'/* ,
-                      '"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.2631932970276!2d127.02308361566217!3d37.50171017981003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca158bfe4ccc7%3A0x63cf35007bd20a47!2z7ISc7IKw67mM65Sp!5e0!3m2!1sko!2skr!4v1662491051106!5m2!1sko!2skr" width="100%" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade" name="iframe"' */),
+                      './img/store/gangnam_map.png',
+                      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.2631932970276!2d127.02308361566217!3d37.50171017981003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca158bfe4ccc7%3A0x63cf35007bd20a47!2z7ISc7IKw67mM65Sp!5e0!3m2!1sko!2skr!4v1662491051106!5m2!1sko!2skr'),
       new Explanation('홍대점',
                       '서울특별시 마포구 양화로 147 1F (아일렉스 홍대)',
                       '12:00~23:00','02-000-0003',
                       './img/store/hongdea_store01.jpg',
                       './img/store/hongdea_store02.jpg',
-                      './img/store/hongdea_map.png'/* ,
-                      '"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.962793072684!2d126.91982911566355!3d37.55594037980005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c98c33378e4e1%3A0xfaad637b9d037106!2z7ISc7Jq47Yq567OE7IucIOuniO2PrOq1rCDslpHtmZTroZwgMTQ3!5e0!3m2!1sko!2skr!4v1662491372777!5m2!1sko!2skr" width="100%" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade" name="iframe"' */),
+                      './img/store/hongdea_map.png',
+                      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.962793072684!2d126.91982911566355!3d37.55594037980005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c98c33378e4e1%3A0xfaad637b9d037106!2z7ISc7Jq47Yq567OE7IucIOuniO2PrOq1rCDslpHtmZTroZwgMTQ3!5e0!3m2!1sko!2skr!4v1662491372777!5m2!1sko!2skr'),
       new Explanation('스타필드 고양점',
                       '경기도 고양시 덕양구 고양대로 1955 스타필드고양 2층',
                       '12:00~21:30','02-000-0004',
                       './img/store/goyang_store01.jpg',
                       './img/store/goyang_store02.jpg',
-                      './img/store/goyang_map.png'/* ,
-                      '"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3159.076810980711!2d126.89412231566575!3d37.64739817978285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9713f6961e85%3A0x33d53c6fd0151b38!2z7Iqk7YOA7ZWE65OcIOqzoOyWkQ!5e0!3m2!1sko!2skr!4v1662491419698!5m2!1sko!2skr" width="100%" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade" name="iframe"' */)
+                      './img/store/goyang_map.png',
+                      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3159.076810980711!2d126.89412231566575!3d37.64739817978285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9713f6961e85%3A0x33d53c6fd0151b38!2z7Iqk7YOA7ZWE65OcIOqzoOyWkQ!5e0!3m2!1sko!2skr!4v1662491419698!5m2!1sko!2skr')
   ]
 
   // 이벤트함수
@@ -74,10 +80,45 @@ function startStore(){
       source[num].action();
   }
 
+  function smallImage(){
+    // 준비하기
+    // const btn2 = document.querySelector('.explain ul>li:last-child>img')
+    // const btn3 = document.querySelectorAll('.explain ul>li:not(:last-child)>img')
+
+    const bigImg = document.querySelector('.bigImg>figcaption');
+      // console.log(bigImg)
+    //   실행문
+    let smallImg = this.getAttribute('src');
+    let smallAlt = this.getAttribute('alt');
+    console.log(smallImg)
+
+    // bigImg.setAttribute('src',smallImg)
+    // bigImg.setAttribute('alt',smallAlt)
+    bigImg.innerHTML = `<img src="${smallImg}" alt="${smallAlt}">`
+  }
+
+  
+  function smallIframe(){
+    // const bigFrame = document.querySelector('.bigImg>figcaption');
+
+    let iframesmallImg = this.getAttribute('src')
+    console.log(iframesmallImg)
+
+    Framei.innerHTML = `<iframe src="${iframesmallImg}" width="100%" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`
+  }
+
   // 이벤트
   console.log(btn)
   btn.forEach(function(btn){
-      btn.onclick = play
+    btn.onclick = play
   })
-
+  btn2.forEach(function(btn2){
+    btn2.onclick = smallImage
+  })
+  // btn3.forEach(function(btn3){
+  //   btn3.onclick = smallIframe
+  // })
+  
+  // let clickSmallImg = this.getAttribute('src')
+  // console.log(clickSmallImg)
 }

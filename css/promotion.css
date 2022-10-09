@@ -233,29 +233,49 @@ div#show>ul>li>dl>dd{
     position: relative;
   }
   li.list04 .bigPic{
-    width:40%;
-    box-sizing: border-box;
-  }
-  li.list04 .bigPic>img{
-    width:100%;
+    width:400px; height:500px;
     border: 3px solid #dfdfdf;
+    position: relative;
+    background: url('../img/promotion/box/originalBox.png') no-repeat center;
   }
+  /* 공통 */
+  li.list04 .bigPic>li:not(:last-child){
+    position: absolute;
+    top:145px;
+    width:96px; height:232px;
+    background-size:95%;
+  }
+  li.list04 .bigPic>li.pic01{
+    left:130px;
+  }
+  li.list04 .bigPic>li.pic02{
+    left:190px;
+  }
+  li.list04 .bigPic>li.pic03{
+    left:250px;
+  }
+  li.list04 .bigPic>li.pic04{
+    width:120px; height:180px;
+    position: absolute;
+    right:35px; bottom:35px;
+  }
+  /*  */
+
   li.list04 #inShow{
-    width:50%;
-    margin-left: 5%;
+    width:calc(100% - 440px);
+    margin-left: 30px;
     box-sizing: border-box;
   }
   ul.allChoice{
     width:100%;
-    /* background-color: yellowgreen; */
   }
-  ul.allChoice li{
-    width:100%;
-    margin-bottom:20px;
-    border-bottom:1px solid #dfdfdf ;
-    text-align: left;
+  ul.allChoice p{
+    display: block;
+    line-height:25px;
+    font-size:15px;
+    text-align: right;
   }
-  div.allPrice{
+  div.total{
     width:100%;
     /* background-color: red; */
     display: flex;
@@ -265,13 +285,13 @@ div#show>ul>li>dl>dd{
     position: absolute;
     right:70px; bottom:80px;
   }
-  div.allPrice>p{
+  div.total>p{
     padding:0 10px;
   }
-  div.allPrice>p:last-child{
+  div.total>p:last-child{
     padding-right:0;
   }
-  div.allPrice>span{
+  div.total>span{
     border-bottom: 1px solid #595959;
     padding:0;
   }
@@ -283,14 +303,17 @@ div#show>ul>li>dl>dd{
 
   /* 버튼 */
   .productBtn, .wrapperBtn, .cardBtn{
+    width:180px;
     display: flex;
-    padding:0px;
     justify-content: flex-end;
+    margin-left:calc(100% - 180px);
   }
   .productBtn>p,
   .wrapperBtn>p,
   .cardBtn>p{
-    padding:0 20px;
+    text-align: center;
+    width:33%;
+    box-sizing: border-box;
     font-size: 36px;
   }
   .productBtn>p:nth-child(2), 
@@ -299,16 +322,12 @@ div#show>ul>li>dl>dd{
   {
     font-size:18px;
   }
-  .productBtn>p:last-child,
-  .wrapperBtn>p:last-child,
-  .cardBtn>p:last-child{
-    padding-right: 0;
-  }
-
   div.lastBtn{
+    width:50%;
     display: flex;
     flex-wrap:wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin:0 auto;
   }
   div.lastBtn>p{
     width:50px;

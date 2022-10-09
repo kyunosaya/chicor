@@ -82,6 +82,11 @@
       margin-bottom: 0;
     }
 
+    /* 버튼 */
+    div.lastBtn{
+      width:60%;
+    }
+
     /*  */
 }
 
@@ -217,10 +222,8 @@
   }
 
   /* 버튼 */
-  main .btn{
-    position: absolute;
-    bottom:30px; left:50%;
-    margin-left:-76.04px;
+  div.lastBtn{
+    width:70%;
   }
 
   /*  */
