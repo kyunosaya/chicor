@@ -21,7 +21,7 @@
     padding:50px;
   }
   div#show>ul>li{
-    padding:50px;
+    padding:30px;
   }
   div#show>ul>li>dl>dd{
     display: block;
@@ -29,7 +29,7 @@
 
     /* list01 = 제품선택하기 1 / 4 */
   li.list01 .bigPic{
-    width:60%;
+    width:50%;
     margin:0 auto;
     margin-bottom:30px;
   }
@@ -43,7 +43,7 @@
 
     /* list02  = 포장선택하기 2 / 4 */
     li.list02 .bigPic{
-      width:60%;
+      width:50%;
       margin:0 auto;
       margin-bottom:30px;
     }
@@ -54,7 +54,7 @@
 
     /* list03 = 추가사항 선택하기 3 / 4 */
     li.list03 .bigPic{
-      width:60%;
+      width:50%;
       margin:0 auto;
       margin-bottom:30px;
     }
@@ -65,7 +65,7 @@
 
     /* list04 = 결과확인하기 4 / 4 */
     li.list04 .bigPic{
-      width:60%;
+      /* width:50%; */
       margin:0 auto;
       margin-bottom:30px;
     }
@@ -73,13 +73,20 @@
       width:100%;
       margin-left: 0;
     }
-    div.allPrice{
+    div.total{
       width:auto;
       right:50px;
+      font-size:28px;
+      line-height:30px;
+      right:30px; bottom:55px;
     }
     .list04 small{
-      right:50px;
+      right:30px; bottom:30px;
       margin-bottom: 0;
+    }
+
+    .set05{
+      margin-bottom:80px
     }
 
     /* 버튼 */
@@ -115,7 +122,7 @@
     margin-bottom:30px;
   }
   div#show>ul>li{
-    padding:30px 30px 60px;
+    padding:30px 20px;
     position: relative;
   }
   div#show>ul>li>dl>dt{ 
@@ -194,9 +201,11 @@
 
   /* list04 = 결과확인하기 4 / 4 */
   li.list04 .bigPic{
-    width:70%;
-    margin:0 auto;
-    margin-bottom:30px;
+    width:calc(94vw - 40px); 
+    height:calc(94vw + 60px); /* 94vw - 40px + 60px */
+    margin:0 auto 30px;
+    box-sizing: border-box;
+    background-size: contain;
   }
   li.list04 #inShow{
     width:100%;
@@ -204,8 +213,11 @@
   }
   ul.allChoice li{
     font-size:15px;
-    margin-bottom:10px;
     line-height:20px;
+  }
+  ul.allChoice p{
+    line-height:15px;
+    font-size:13px;
   }
   div.allPrice{
     width:auto;
@@ -221,10 +233,43 @@
     margin-bottom: 0;
   }
 
+  /* 결과물 제품들 사진 */
+    /* 결과물 제품들 사진 */
+    li.list04 .bigPic>li:not(:last-child){
+      width:24%; height:46.4%;
+      top:29%; /* 145px */
+    }
+    li.list04 .bigPic>li.pic01{
+      left:32.5% /* 130px; */
+    }
+    li.list04 .bigPic>li.pic02{
+      left:47.5% /* 190px; */
+    }
+    li.list04 .bigPic>li.pic03{
+      left:62.5% /* 250px */
+    }
+    li.list04 .bigPic>li.pic04{
+      width:84px; height:126px; /* 35% */
+      right:20px; bottom:20px;
+    }
+    li.list04 #inShow{
+      width:100%;
+      margin-left: 0;
+    }/*  */
+
+    div.total{
+      width:auto;
+      font-size:24px;
+      line-height: 30px;
+      right:20px; bottom:55px;
+    }
+    .list04 small{
+      right:20px; bottom:30px;
+    }
+
   /* 버튼 */
   div.lastBtn{
     width:70%;
   }
-
   /*  */
 }

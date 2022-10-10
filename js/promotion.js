@@ -227,10 +227,11 @@ function result(){
                 .css({
                     width:'100%',textAlign:'left',
                     borderBottom:'1px solid #dfdfdf',
-                    lineHeight:'30px',padding:'10px 0'
+                    lineHeight:'30px',padding:'5px 0'
                 }).append('<p>'+checkNum+'원</p>')
                 $('.pic01').css({
-                    background:"url('../img/promotion/product/"+checkPic+".png') no-repeat center"
+                    background:"url('../img/promotion/product/"+checkPic+".png') no-repeat center",
+                    backgroundSize:'95%'
                 })
             }
             // 두번째제품
@@ -239,10 +240,11 @@ function result(){
                 .css({
                     width:'100%',textAlign:'left',
                     borderBottom:'1px solid #dfdfdf',
-                    lineHeight:'30px',padding:'10px 0'
+                    lineHeight:'30px',padding:'5px 0'
                 }).append('<p>'+checkNum+'원</p>')
                 $('.pic02').css({
-                    background:"url('../img/promotion/product/"+checkPic+".png') no-repeat center"
+                    background:"url('../img/promotion/product/"+checkPic+".png') no-repeat center",
+                    backgroundSize:'95%'
                 })
             }
             // 세번째제품
@@ -251,23 +253,21 @@ function result(){
                 .css({
                     width:'100%',textAlign:'left',
                     borderBottom:'1px solid #dfdfdf',
-                    lineHeight:'30px',padding:'10px 0'
+                    lineHeight:'30px',padding:'5px 0'
                 }).append('<p>'+checkNum+'원</p>')
                 $('.pic03').css({
-                    background:"url('../img/promotion/product/"+checkPic+".png') no-repeat center"
+                    background:"url('../img/promotion/product/"+checkPic+".png') no-repeat center",
+                    backgroundSize:'95%'
                 })
             }
 
             // 합계
             let regex = /[^0-9]/g; /* 문자객체제거 */
-            let set01Num = $('.set01>p').text()
-            let result01 = set01Num.replace(regex, "")
-            let set02Num = $('.set02>p').text()
-            let result02 = set02Num.replace(regex, "")
-            let set03Num = $('.set03>p').text()
-            let result03 = set03Num.replace(regex, "")
+            let set01Num = $('.set01>p').text().replace(regex, "")
+            let set02Num = $('.set02>p').text().replace(regex, "")
+            let set03Num = $('.set03>p').text().replace(regex, "")
 
-            let totalPrice = ( Number(result01) + Number(result02) + Number(result03) + 2500 ).toLocaleString('ko-KR')
+            let totalPrice = ( Number(set01Num) + Number(set02Num) + Number(set03Num) + 2500 ).toLocaleString('ko-KR')
             $('.total>span').text(totalPrice)
     })
 
@@ -283,10 +283,11 @@ function result(){
                 .css({
                     width:'100%',textAlign:'left',
                     borderBottom:'1px solid #dfdfdf',
-                    lineHeight:'50px'
+                    lineHeight:'40px'
                 })
-                $('.bigPic').css({
-                    background:"url('../img/promotion/box/"+checkPic+".png') no-repeat center"
+                $('.list04 .bigPic').css({
+                    background:"url('../img/promotion/box/"+checkPic+".png') no-repeat center",
+                    backgroundSize:'contain'
                 })
             }     
     })
@@ -303,7 +304,7 @@ function result(){
                 .css({
                     width:'100%',textAlign:'left',
                     borderBottom:'1px solid #dfdfdf',
-                    lineHeight:'50px'
+                    lineHeight:'40px'
                 })
                 $('.pic04').css({
                     background:"url('../img/promotion/giftcard/"+checkPic+".png') no-repeat center",

@@ -243,7 +243,7 @@ div#show>ul>li>dl>dd{
     position: absolute;
     top:145px;
     width:96px; height:232px;
-    background-size:95%;
+    /* background-size:95%; */
   }
   li.list04 .bigPic>li.pic01{
     left:130px;
@@ -298,6 +298,7 @@ div#show>ul>li>dl>dd{
   .list04 small{
     font-size:12px;
     position: absolute;
+    line-height:15px;
     right:70px; bottom:50px;
   }
 
