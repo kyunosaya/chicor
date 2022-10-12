@@ -277,7 +277,6 @@ div#show>ul>li>dl>dd{
   }
   div.total{
     width:100%;
-    /* background-color: red; */
     display: flex;
     justify-content: flex-end;
     font-size: 36px;
