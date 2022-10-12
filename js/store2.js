@@ -103,9 +103,12 @@ function startStore(){
 
     let iframesmallImg = this.getAttribute('src')
     console.log(iframesmallImg)
-
-    Framei.innerHTML = `<iframe src="${iframesmallImg}" width="100%" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`
   }
+
+  // function bigImg(){
+  //   document.querySelector('.explain ul>li:not(:last-child)>img').onclick()
+  // }
+  // function bigMap(){}
 
   // 이벤트
   console.log(btn)
