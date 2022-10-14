@@ -4,9 +4,13 @@ function startStore(){
     // btn
   const btn = document.querySelectorAll('.anotherStore>li>button')
     // img
-  const btn2 = document.querySelectorAll('.explainImg li:not(:last-child)>img')
+  // const btn2 = document.querySelectorAll('.explainImg li:not(:last-child)>img')
+  const btn2 = document.querySelectorAll('.explainImg li>img')
     //iframe
   const btn3 = document.querySelector('.explainImg li:last-child>img')
+  // bigImg
+  const classBigImg = document.querySelector('.bigImg>figcaption');
+  const classBigImgLast = document.querySelector('.bigImg>figcaption:last-child');
 
     //   source
   const Title = document.querySelector('.explain>dt>dfn');
@@ -16,8 +20,6 @@ function startStore(){
   const Img01 = document.querySelector('.explainImg li:first-child');
   const Img02 = document.querySelector('.explainImg li:nth-child(2)');
   const Img03 = document.querySelector('.explainImg li:last-child');
-  const Framei = document.querySelector('.bigImg>figcaption');
-
   // 객체생성
   function Explanation(title,address,time,phone,img01,img02,img03,framei){
       this.title = title;
@@ -39,7 +41,7 @@ function startStore(){
       Img01.innerHTML = `<img src="${this.img01}" alt="${this.title}">`
       Img02.innerHTML = `<img src="${this.img02}" alt="${this.title}">`
       Img03.innerHTML = `<img src="${this.img03}" alt="${this.title}">`
-      Framei.innerHTML = `<iframe src="${this.framei}" width="100%" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade" name="iframe"></iframe>`
+      classBigImg.innerHTML = `<iframe src="${this.framei}" width="100%" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade" name="iframe"></iframe>`
   }
   //인스턴스
   let source = [
@@ -81,47 +83,31 @@ function startStore(){
   }
 
   function smallImage(){
-    // 준비하기
-    // const btn2 = document.querySelector('.explain ul>li:last-child>img')
-    // const btn3 = document.querySelectorAll('.explain ul>li:not(:last-child)>img')
-
-    const bigImg = document.querySelector('.bigImg>figcaption');
-      // console.log(bigImg)
     //   실행문
-    let smallImg = this.getAttribute('src');
+    let smallSrc = this.getAttribute('src');
     let smallAlt = this.getAttribute('alt');
-    console.log(smallImg)
+     console.log('hhh')
 
-    // bigImg.setAttribute('src',smallImg)
-    // bigImg.setAttribute('alt',smallAlt)
-    bigImg.innerHTML = `<img src="${smallImg}" alt="${smallAlt}">`
+    classBigImg.innerHTML = `<img src="${smallSrc}" alt="${smallAlt}">`
   }
 
   
   function smallIframe(){
-    // const bigFrame = document.querySelector('.bigImg>figcaption');
-
-    let iframesmallImg = this.getAttribute('src')
-    console.log(iframesmallImg)
   }
-
-  // function bigImg(){
-  //   document.querySelector('.explain ul>li:not(:last-child)>img').onclick()
-  // }
-  // function bigMap(){}
 
   // 이벤트
   console.log(btn)
   btn.forEach(function(btn){
     btn.onclick = play
   })
+  // btn2.onclick = smallImage
   btn2.forEach(function(btn2){
     btn2.onclick = smallImage
   })
   // btn3.forEach(function(btn3){
+  //   btn3.onclick = smallImage
+  // })
+  // btn3.forEach(function(btn3){
   //   btn3.onclick = smallIframe
   // })
-  
-  // let clickSmallImg = this.getAttribute('src')
-  // console.log(clickSmallImg)
 }
